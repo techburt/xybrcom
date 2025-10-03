@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XybrCom - Building Apps That Solve Real Problems</title>
+    <meta name="description" content="Alaska-based app development company creating solutions for pet health and wellness.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .about p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: center;
+            color: #555;
+        }
+        
+        /* Apps Section */
+        .apps {
+            padding: 80px 0;
+        }
+        
+        .apps h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .app-card h3 {
+            font-size: 2em;
+            color: #4A90E2;
+            margin-bottom: 15px;
+        }
+        
+        .app-card p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #4A90E2;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .learn-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .learn-more:hover {
+            background: #357ABD;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .contact p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .contact a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header p {
+                font-size: 1.1em;
+            }
+            
+            .about h2, .apps h2, .contact h2 {
+                font-size: 2em;
+            }
+            
+            .app-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>XybrCom</h1>
+            <p>Building apps that solve real problems for people who love their pets</p>
+        </div>
+    </header>
+    
+    <section class="about">
+        <div class="container">
+            <h2>About XybrCom</h2>
+            <p>
+                Based in Alaska, XybrCom is dedicated to creating innovative mobile applications 
+                that make life easier for pet owners. We believe technology should solve real-world 
+                problems with simple, intuitive solutions.
+            </p>
+            <p>
+                Our mission is to empower pet parents with tools that help them make informed 
+                decisions about their pets' health and wellness.
+            </p>
+        </div>
+    </section>
+    
+    <section class="apps">
+        <div class="container">
+            <h2>Our Apps</h2>
+            <div class="app-card">
+                <h3>🐾 PetAllergyScan</h3>
+                <p>
+                    Instantly scan pet food ingredients to check for allergens. Using advanced 
+                    camera technology and real-time highlighting, PetAllergyScan helps you keep 
+                    your furry friends safe and healthy.
+                </p>
+                <span class="badge">Coming 2025</span>
+                <br>
+                <a href="https://petallergyscan.com" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to collaborate?</p>
+            <p>
+                <a href="mailto:contact@xybrcom.com">contact@xybrcom.com</a>
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 XybrCom, LLC. All rights reserved. | Anchorage, Alaska</p>
+        </div>
+    </footer>
+</body>
+</html>
