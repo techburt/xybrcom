@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XybrCom LLC - Custom Application Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo-img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .highlight {
+            color: #00d4ff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #5a6c7d;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        /* What We Do Section */
+        .what-we-do {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: #f8fbff;
+            border-radius: 12px;
+            border: 2px solid #e6f4ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+            border-color: #00d4ff;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1e3a5f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #5a6c7d;
+            line-height: 1.8;
+        }
+
+        /* Approach Section */
+        .approach {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+        }
+
+        .approach-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .approach-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .approach-point {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .approach-point .number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .approach-point h4 {
+            color: #1e3a5f;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .approach-point p {
+            color: #5a6c7d;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 40px auto 0;
+            padding: 40px;
+            background: #f8fbff;
+            border-radius: 12px;
+            border: 2px solid #e6f4ff;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #5a6c7d;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0099cc;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: #1e3a5f;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        footer p {
+            color: #b0c4d4;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-points {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="XybrCom_Logo_2025.png" alt="XybrCom LLC Logo" class="logo-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Building <span class="highlight">Solutions</span><br>That Matter</h1>
+            <p>Custom applications designed to solve unique pain points and transform how you work</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">We create custom applications tailored to your specific challenges. No cookie-cutter solutions—just software that works for you.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Applications</h3>
+                    <p>Native and cross-platform mobile apps designed for iOS and Android that users love to interact with.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Applications</h3>
+                    <p>Responsive, scalable web applications built with modern technologies to meet your business needs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Unique pain points require unique solutions. We build exactly what you need, nothing more, nothing less.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach">
+        <div class="container">
+            <h2 class="section-title">Our Approach</h2>
+            <p class="section-subtitle">We believe great software starts with understanding your unique challenges</p>
+            
+            <div class="approach-points">
+                <div class="approach-point">
+                    <div class="number">1</div>
+                    <h4>Listen</h4>
+                    <p>We dive deep to understand your pain points and goals</p>
+                </div>
+                
+                <div class="approach-point">
+                    <div class="number">2</div>
+                    <h4>Design</h4>
+                    <p>We craft intuitive solutions tailored to your needs</p>
+                </div>
+                
+                <div class="approach-point">
+                    <div class="number">3</div>
+                    <h4>Build</h4>
+                    <p>We develop robust, scalable applications with precision</p>
+                </div>
+                
+                <div class="approach-point">
+                    <div class="number">4</div>
+                    <h4>Deliver</h4>
+                    <p>We launch your solution and support your success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Build Something Great</h2>
+            <p class="section-subtitle">Have a challenge that needs solving? We'd love to hear about it.</p>
+            
+            <div class="contact-info">
+                <p>Based in Alaska, serving clients everywhere</p>
+                <p>Ready to start your project?</p>
+                <a href="mailto:info@xybrcom.com">info@xybrcom.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 XybrCom LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
